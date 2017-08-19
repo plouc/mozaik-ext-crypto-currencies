@@ -1,0 +1,41 @@
+port: 5000
+
+# define duration between each dashboard rotation (seconds)
+rotationDuration: 10
+# define the interval used by Mozaïk Bus to call registered APIs
+apisPollInterval: 100000
+
+dashboards:
+- title:   Crypto currencies trends
+  columns: 6
+  rows:    6
+  widgets:
+  -
+    extension: cc
+    widget:    Table
+    columns:   2
+    rows:      4
+    x:         0
+    y:         0
+  -
+    extension:    github
+    widget:       RepoBadge
+    repository:   plouc/mozaik-ext-crypto-currencies
+    columns:      2
+    rows:         2
+    x:            0
+    y:            4
+  -
+    extension: cc
+    widget:    VolumeBubble
+    columns:   2
+    rows:      3
+    x:         2
+    y:         0
+  -
+    extension: cc
+    widget:    VolumeTreeMap
+    columns:   2
+    rows:      3
+    x:         2
+    y:         3
