@@ -1,0 +1,1 @@
+# Mozaik crypto currencies trends extension
