@@ -4,7 +4,7 @@ import { Widget, WidgetHeader, WidgetBody } from '@mozaik/ui'
 import { ResponsiveBubble } from 'nivo'
 import DollarIcon from 'react-icons/lib/fa/dollar'
 
-export default class Table extends Component {
+export default class VolumeBubble extends Component {
     static propTypes = {
         apiData: PropTypes.object,
         theme: PropTypes.object.isRequired,
@@ -41,7 +41,7 @@ export default class Table extends Component {
 
         return (
             <Widget>
-                <WidgetHeader title="Volume" icon={DollarIcon} />
+                <WidgetHeader title="Volume (US$ in 24H)" icon={DollarIcon} />
                 <WidgetBody>
                     {body}
                 </WidgetBody>

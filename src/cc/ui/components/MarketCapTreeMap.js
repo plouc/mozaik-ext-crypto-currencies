@@ -4,7 +4,7 @@ import { Widget, WidgetHeader, WidgetBody } from '@mozaik/ui'
 import { ResponsiveTreeMap } from 'nivo'
 import DollarIcon from 'react-icons/lib/fa/dollar'
 
-export default class Table extends Component {
+export default class MarketCapTreeMap extends Component {
     static propTypes = {
         apiData: PropTypes.object,
         theme: PropTypes.object.isRequired,
@@ -27,7 +27,7 @@ export default class Table extends Component {
                         name: 'volumes',
                         children: stats.map(entry => ({
                             name: entry.name,
-                            value: entry['24h_volume_usd'],
+                            value: Number(entry.market_cap_usd),
                             symbol: entry.symbol,
                         })),
                     }}
@@ -45,7 +45,7 @@ export default class Table extends Component {
 
         return (
             <Widget>
-                <WidgetHeader title="Volume" icon={DollarIcon} />
+                <WidgetHeader title="Market cap (US$)" icon={DollarIcon} />
                 <WidgetBody>
                     {body}
                 </WidgetBody>
